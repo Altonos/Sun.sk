@@ -1,0 +1,48 @@
+
+command /weather <text>:
+	trigger:
+
+		if arg-1 is "sun":
+
+			if player has 5 iron ingot in his inventory:
+				remove 5 iron ingot from player's inventory
+				set weather to sun
+				send "&6Wetter wurde geändert"
+				stop
+			
+			send "&7 Du brauchst 5 Eisen"
+
+		if arg-1 is "rain":
+			if player has 5 iron ingot in his inventory:
+				remove 5 iron ingot from player's inventory
+				set weather to rain
+				send "&6Wetter wurde geändert"
+				stop
+			
+			send "&7 Du brauchst 5 Eisen"
+
+
+
+
+
+command /gm0:
+	permission: Sk.admin
+	trigger:
+		set player's gamemode to survival
+		send "&6Du bist jetzt im survival modus."
+
+
+command /gm1:
+	permission: Sk.admin
+	trigger:
+		set player's gamemode to creative
+		send "&6Du bist jetzt im creative modus."
+
+
+command /gm2:
+	permission: Sk.admin
+	trigger:
+		set player's gamemode to spectator
+		send "&6Du bist jetzt im spectator modus."
+
+
